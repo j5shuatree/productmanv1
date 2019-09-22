@@ -90,5 +90,5 @@ bower_components/
 #Node Modules
 node_modules
 
-#json packacge lock file
+#json package lock file
 package-lock.json

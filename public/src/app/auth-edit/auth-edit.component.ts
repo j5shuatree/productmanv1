@@ -14,6 +14,7 @@ export class AuthEditComponent {
   @Input() product: Product;
   toggledisplay = false;
 
+
   constructor(private _http: HttpService) { }
 
   ngOnInit() {
