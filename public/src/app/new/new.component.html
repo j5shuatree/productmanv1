@@ -1,0 +1,24 @@
+<mat-card class="example-card lg content">
+      <table>
+        <tr>
+          <td>
+
+            <mat-card>
+              <h3>CREATE A NEW PRODUCT: Submit Form</h3>
+              <form (submit)="onAddProduct($event, prodForm)" #prodForm = 'ngForm'>
+                <!-- use the json pipe to see how newAuthor changes in real time -->
+
+                  <h5 style='color:darkgreen'>{{ newProduct | json }}</h5>
+                  <h6>Title:</h6><p>
+                  <input type="text" name="title" [(ngModel)]="newProduct.title">
+                  <h6>Price:</h6><p>
+                  <input type="text" name="price" [(ngModel)]="newProduct.price">
+                  <h6>Image url:</h6><p>
+                  <input type="text" name="url" [(ngModel)]="newProduct.url">
+                  <button style='margin-top:25px' class="btn btn-lg btn-primary btn-block" type="submit">Add Product</button>
+              </form>
+            </mat-card>
+            </td>
+          </tr>
+        </table>
+    </mat-card>

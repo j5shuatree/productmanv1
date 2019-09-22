@@ -1,0 +1,29 @@
+
+    <table style='background-color:lightblue;padding:5%'>
+         <a style='color:green;padding-bottom:10px'>PRODUCTS LIST</a>
+         <tr *ngFor="let product of myProduct">
+          <td>
+                <mat-card class="example-card">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"> </div>
+                    <mat-card-title>{{ product.title}}<p>
+                    <a style="font-size:14px">PRODUCT SKU: {{ product._id}}</a></mat-card-title>
+                    <mat-card-subtitle>$ {{ product.price}}</mat-card-subtitle>
+                     <img style="width:250px" mat-card-image src="{{ product.url }}" alt="Photo of Product">
+
+                  </mat-card-header>
+
+                      <mat-card-actions>
+                      <button style="margin-left:38px" (click)= "onEdit(product)" mat-raised-button>EDIT</button>
+
+                         <i class="fa fa-home"></i>
+
+
+                        <button style='margin-top:25px' (click)="onDeleteOne(product._id)" class="btn btn-lg btn-primary btn-block" type="submit" mat-raised-button>Delete</button>
+
+                        </mat-card-actions>
+                  </mat-card>
+          </td>
+        </tr>
+      </table>
+      <app-auth-edit [product]='product' ><app-auth-edit>
