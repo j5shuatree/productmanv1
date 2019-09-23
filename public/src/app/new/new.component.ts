@@ -12,8 +12,6 @@ export class NewComponent implements OnInit {
 
   @Input()  product: Product;
   newProduct = new Product();
-  
-
   constructor(private _http: HttpService) { }
 
   ngOnInit() {

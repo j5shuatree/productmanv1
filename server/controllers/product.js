@@ -26,7 +26,7 @@ module.exports = {
         const product = new Products(req.body);
         product.save()
             .then((data) => {
-                res.json({newProducts: data});
+                res.json({newProduct: data});
             })
             .catch(err => res.json(err));
     },
