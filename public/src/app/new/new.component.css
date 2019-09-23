@@ -1,0 +1,32 @@
+.ng-invalid {
+color:rgb(212, 50, 36);
+
+ }
+ .invalid-feedback{
+
+
+ }
+.ng-valid {
+  color:rgb(4, 20, 79);
+}
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.ng-untouched {
+  color:rgb(212, 50, 36);
+}
+.ng-touched {
+  color:rgb(4, 20, 79);
+}
+.ng-dirty {
+}
+.ng-pristine {
+
+ }

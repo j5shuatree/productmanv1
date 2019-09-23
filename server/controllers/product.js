@@ -40,7 +40,7 @@ module.exports = {
           url: req.body.url
         }, function(err, doc){
           if (err) {
-            return res.send(500, { error: err });
+            return res.send(400, { error: err });
           }
 
         else 

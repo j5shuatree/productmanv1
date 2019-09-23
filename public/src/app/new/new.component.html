@@ -9,7 +9,12 @@
                 <!-- use the json pipe to see how newAuthor changes in real time -->
 
                   <h5 style='color:darkgreen'>{{ newProduct | json }}</h5>
-                  <h6>Title:</h6><p>
+
+                    <h6>Email:</h6><p>
+                    <input matInput name="email" placeholder="Enter your email" [(ngModel)]="newProduct.email" required><p></p>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+
+<h6>Title:</h6><p>
                   <input type="text" name="title" [(ngModel)]="newProduct.title">
                   <h6>Price:</h6><p>
                   <input type="text" name="price" [(ngModel)]="newProduct.price">
@@ -22,3 +27,5 @@
           </tr>
         </table>
     </mat-card>
+
+
